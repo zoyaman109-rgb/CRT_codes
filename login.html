@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login · Zoyaaa</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-shell fade">
+            <div class="auth-header">
+                <div class="auth-brand">
+                    <span class="logo-dot"></span>
+                    <div>
+                        <div>Zoyaaa</div>
+                        <span class="brand-sub">Access console</span>
+                    </div>
+                </div>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">Toggle</button>
+            </div>
+
+            <div class="auth-card">
+                <h2>Sign in</h2>
+                <p class="auth-subtitle">Continue to your account.</p>
+                <div id="errorMsg" class="error"></div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" autocomplete="email" />
+                </div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" autocomplete="current-password" />
+                </div>
+
+                <button class="cta" onclick="login()">Sign in</button>
+
+                <div class="auth-actions">
+                    <a class="ghost-link" href="forgetpass.html">Forgot password?</a>
+                    <a class="ghost-link" href="register.html">Create account</a>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+    <script src="theme.js"></script>
+    <script src="index.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password · Zoyaaa</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="auth-page">
+        <div class="auth-shell fade">
+            <div class="auth-header">
+                <div class="auth-brand">
+                    <span class="logo-dot"></span>
+                    <div>
+                        <div>Zoyaaa</div>
+                        <span class="brand-sub">Reset access</span>
+                    </div>
+                </div>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">Toggle</button>
+            </div>
+
+            <div class="auth-card">
+                <h2>Reset your password</h2>
+                <p class="auth-subtitle">Send a secure reset link to your inbox.</p>
+                <div id="errorMsg" class="error"></div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" autocomplete="email" />
+                </div>
+
+                <button class="cta" onclick="resetPass()">Send reset link</button>
+
+                <div class="auth-actions">
+                    <a class="ghost-link" href="login.html">Back to login</a>
+                    <a class="ghost-link" href="register.html">Create account</a>
+                </div>
+               
+        </div>
+    </div>
+
+    <script src="theme.js"></script>
+    <script src="index.js"></script>
+    <script>
+        function resetPass() {
+            const email = document.getElementById("email").value;
+            const errorMsg = document.getElementById("errorMsg");
+
+            errorMsg.classList.remove("show");
+            errorMsg.innerText = "";
+
+            if (!email) {
+                errorMsg.innerText = "Please enter your email.";
+                errorMsg.classList.add("show");
+                return;
+            }
+
+            alert("Password reset link sent to your email!");
+        }
+    </script>
+
+</body>
+
+</html>
